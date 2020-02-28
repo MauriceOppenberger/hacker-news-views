@@ -23,7 +23,7 @@ export function fetchMainPosts(type) {
       if (!ids) {
         throw new Error(ids.message);
       }
-      return ids.slice(0, 10);
+      return ids.slice(0, 30);
     })
     .then(ids => Promise.all(ids.map(fetchItem)));
 }

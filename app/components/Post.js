@@ -46,7 +46,7 @@ const initialState = {
 export default function Post({ location }) {
   const [state, dispatch] = React.useReducer(fetchReducer, initialState);
   const { id } = queryString.parse(location.search);
-
+  console.log(location);
   React.useEffect(() => {
     dispatch({ type: "fetching" });
     fetchItem(id)
